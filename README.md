@@ -1,9 +1,5 @@
 # Развертывание Django-приложения с PostgreSQL
 
-## Предварительные требования
-- Docker (https://docs.docker.com/get-docker/)
-- Docker Compose (https://docs.docker.com/compose/install/)
-
 ## Установка и запуск
 1. Клонируй репозиторий
  ```bash
@@ -45,5 +41,10 @@ Django-приложение: http://localhost:8000
 
 Остановить контейнеры:
 
-bash !!docker-compose down !! !!Остановить и удалить данные: !! !!bash
+```bash 
+docker-compose down
+```
+Остановить и удалить данные: 
+```bash
 docker-compose down --volumes
+```
