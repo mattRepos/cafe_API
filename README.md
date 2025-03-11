@@ -5,48 +5,45 @@
 - Docker Compose (https://docs.docker.com/compose/install/)
 
 ## Установка и запуск
-1. **Клонируй репозиторий**
-   ```bash
-   git clone https://github.com/ваш-репозиторий.git
-   cd ваш-репозиторий
-2. **Создай файл .env**
+1. Клонируй репозиторий
+ ```bash
+ git clone https://github.com/ваш-репозиторий.git
+ cd ваш-репозиторий
+```
+### 2. Создай файл .env
 Создай файл .env в корне проекта и добавь туда:
 
-env
+```env
 DB_NAME=cafe_db
 DB_USER=postgres
 DB_PASSWORD=postgres
 DB_HOST=db
 DB_PORT=5432
+```
+3. Запусти контейнеры
 
-3. **Запусти контейнеры**
-
-bash
+```bash
 docker-compose up --build
+```
+4. Примени миграции
 
-4. **Примени миграции**
-
-bash
+```bash
 docker-compose exec web python manage.py migrate
+```
+5. Создай суперпользователя
 
-5. **Создай суперпользователя**
-
-bash
+```bash
 docker-compose exec web python manage.py createsuperuser
-
-6. **Проверь приложение**
+```
+6. Проверь приложение
 
 Django-приложение: http://localhost:8000
 
 Админка Django: http://localhost:8000/admin
 
-7. **Остановка и удаление контейнеров**
+7. Остановка и удаление контейнеров
 
 Остановить контейнеры:
 
-bash
-docker-compose down
-Остановить и удалить данные:
-
-bash
-docker-compose down
+bash !!docker-compose down !! !!Остановить и удалить данные: !! !!bash
+docker-compose down --volumes
