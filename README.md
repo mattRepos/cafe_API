@@ -37,6 +37,8 @@ Django-приложение: http://localhost:8000
 
 Админка Django: http://localhost:8000/admin
 
+Swagger документация API : http://localhost:8000/swagger/
+
 7. Остановка и удаление контейнеров
 
 Остановить контейнеры:
